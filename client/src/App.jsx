@@ -1,13 +1,12 @@
-import './App.css';
-import Home from './pages/home';
+import { Button } from "./components/ui/button"
+import Home from "./pages/home"
 
 function App() {
-
-  return (
-    <h1 className="text-xl font-bold underline">
-    Hello world!
-  </h1>
-  )
+    return (
+        <div>
+            <Button classname="bg-sky-500 px-4 w-4 mt-2">Click me</Button>
+        </div>
+    )
 }
 
 export default App

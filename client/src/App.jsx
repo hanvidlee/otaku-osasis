@@ -4,7 +4,9 @@ import Home from './pages/home';
 function App() {
 
   return (
-  <div></div>
+    <h1 className="text-xl font-bold underline">
+    Hello world!
+  </h1>
   )
 }
 

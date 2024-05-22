@@ -27,8 +27,8 @@ jobs:
           pwd
           ls -a
           python -u ${{ env.MAIN_DIRECTORY }}/connection/AnimeInformation.py
-          git config --global user.email "hammsowon@gmail.com"
-          git config --global user.name "Irosora"
+          git config user.email "hammsowon@gmail.com"
+          git config user.name "Irosora"
           git add .
           git commit -m "Update data.json"
           git push

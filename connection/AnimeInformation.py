@@ -26,7 +26,24 @@ class Anime:
             sleep(0.5)
             print(request.json())
             for item in request.json()['data']:
-                result.update({item['mal_id']: {"title": item["title"], "large_image_url": item["images"]["jpg"]["large_image_url"]}})
+                result.update({item['mal_id']: {"title": item["title_english"],
+                                                "episodes": item["episodes"],
+                                                "type": item["type"],
+                                                "rating": item["rating"],
+                                                "score": item["score"],
+                                                "scored_by": item["scored_by"],
+                                                "rank": item["rank"],
+                                                "popularity": item["popularity"],
+                                                "synopsis": item["synopsis"],
+                                                "season": item["season"],
+                                                "year": item["year"],
+                                                "producers": [producer["name"] for producer in item["producers"]],
+                                                "studios": [studio["name"] for studio in item["studios"]],
+                                                "genres": [genre["name"] for genre in item["genres"]],
+                                                "themes": [theme["name"] for theme in item["themes"]],
+                                                "image_url": item["images"]["jpg"]["image_url"],
+                                                "small_image_url": item["images"]["jpg"]["small_image_url"],
+                                                "large_image_url": item["images"]["jpg"]["large_image_url"]}})
         
         with open('data.json', 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=4)

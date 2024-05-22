@@ -16,8 +16,8 @@ print(r.json()['data'][8])
 
 topAnime = "https://api.jikan.moe/v4/anime"
 
-request = requests.get(topAnime, params={'order_by': "mal_id"})
-print(request)
+request = requests.get(topAnime, params={'order_by': "mal_id", "page": 194})
+print(request.json())
 print(request.json()['data'][0]['mal_id'])
 
 data = {request.json()['data'][0]['mal_id']: {"title": request.json()['data'][0]["title"], "large_image_url": request.json()['data'][0]["images"]["jpg"]["large_image_url"] }}

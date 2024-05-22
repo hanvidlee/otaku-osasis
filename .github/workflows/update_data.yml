@@ -25,7 +25,7 @@ jobs:
       - name: Update anime information data
         run: |
           pwd
-          ls -la
+          ls -al
           python -u ${{ env.MAIN_DIRECTORY }}/connection/AnimeInformation.py
           git config user.email "hammsowon@gmail.com"
           git config user.name "Irosora"

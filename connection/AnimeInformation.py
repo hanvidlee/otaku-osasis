@@ -22,7 +22,7 @@ class Anime:
             # GET request on each page
             request = requests.get(self.url, params={'order_by': "mal_id", "page": i})
             # Sleep to wait in between API calls
-            sleep(0.5)
+            sleep(1)
             for item in request.json()['data']:
                 result.update({item['mal_id']: {"title": item["title_english"],
                                                 "episodes": item["episodes"],

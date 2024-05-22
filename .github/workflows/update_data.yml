@@ -7,7 +7,7 @@ on:
     branches:
       - 'feature/connect_aws_website'
     paths:
-      - '.github/workflows/update_data.yml'
+      - '.github/workflows/**.yml'
 
 jobs:
   update_data:

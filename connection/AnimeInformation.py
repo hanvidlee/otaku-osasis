@@ -17,7 +17,7 @@ class Anime:
         numOfPages = totalCount // 25
         print(numOfPages)
         # Iterate through each page
-        for i in range(1, 10):
+        for i in range(1, numOfPages):
             print(i)
             print(type(i))
             # GET request on each page

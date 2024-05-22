@@ -1,0 +1,21 @@
+
+name: Update Anime Information Data JSON
+on:
+  # schedule:
+  #   - cron: '0 0 * * 5'
+  push:
+    branches:
+      - 'feature/connect_aws_website'
+    paths:
+      - 'connection/**'
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      
+      - name: Test
+        run: |
+          echo Hello World!

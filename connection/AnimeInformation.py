@@ -17,7 +17,7 @@ class Anime:
         numOfPages = totalCount // 25
         print(numOfPages)
         # Iterate through each page
-        for i in range(1, 25):
+        for i in range(1, numOfPages):
             print(i)
             # GET request on each page
             request = requests.get(self.url, params={'order_by': "mal_id", "page": i})

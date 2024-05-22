@@ -27,4 +27,6 @@ jobs:
           pwd
           ls -a
           python -u ${{ env.MAIN_DIRECTORY }}/connection/AnimeInformation.py
-          git status
+          git add .
+          git commit -m "Update data.json"
+          git push

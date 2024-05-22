@@ -12,6 +12,8 @@ on:
 jobs:
   update_data:
     runs-on: ubuntu-latest
+    env:
+      MAIN_DIRECTORY: "/home/runner/work/otaku-osasis/otaku-osasis"
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
@@ -20,8 +22,9 @@ jobs:
           ref: 'feature/connect_aws_website'
         
       
-      - name: Test
+      - name: Update anime information data
         run: |
           pwd
           ls -a
-          python -V
+          python -u ${{ env.MAIN_DIRECTORY }}/connection/AnimeInformation.py
+          git status
